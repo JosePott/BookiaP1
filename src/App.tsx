@@ -5,7 +5,9 @@ import Home from './pages/Home'; // Página "Tus Libros"
 import MiAvance from './pages/MiAvance'; // Página "Mi Avance"
 import Biblioteca from './pages/Biblioteca'; // Página "Añadir"
 import Favoritos from './pages/Favoritos'; // Página "Favoritos"
-import { playCircle, radio, library, heart } from 'ionicons/icons';
+import MiPerfil from './pages/MiPerfil'; // Página "Mi Perfil"
+import Login from './pages/Login'; // Página "Login"
+import { playCircle, radio, library, heart, logoApple } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -48,6 +50,14 @@ const App: React.FC = () => (
           <Route exact path="/favoritos">
             <Favoritos />
           </Route>
+          <Route exact path="/mi-perfil">
+            <MiPerfil />
+          </Route>
+
+          {/* Ruta para la página de Login */}
+          <Route exact path="/login">
+            <Login />
+          </Route>
 
           {/* Redirección al Home si no se encuentra la ruta */}
           <Route exact path="/">
@@ -70,6 +80,11 @@ const App: React.FC = () => (
           <IonTabButton tab="biblioteca" href="/biblioteca">
             <IonIcon icon={library} />
             <IonLabel>Añadir</IonLabel>
+          </IonTabButton>
+
+          <IonTabButton tab="Mi Perfil" href="/mi-perfil">
+            <IonIcon icon={logoApple} />
+            <IonLabel>Mi Perfil</IonLabel>
           </IonTabButton>
 
           <IonTabButton tab="favoritos" href="/favoritos">
