@@ -45,6 +45,7 @@ const Home: React.FC = () => {
         <IonBreadcrumbs maxItems={maxBreadcrumbs} onIonCollapsedClick={() => setMaxBreadcrumbs(undefined)}>
           <IonBreadcrumb href="#home">Home</IonBreadcrumb>
           <IonBreadcrumb href="/login">Login</IonBreadcrumb>
+          <IonBreadcrumb href="/registro">Registro</IonBreadcrumb>    
         </IonBreadcrumbs>
       </IonHeader>
 

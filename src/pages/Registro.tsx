@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg, IonInput, IonGrid, IonRow, IonCol } from '@ionic/react';
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase/firebaseConfig';
-import { useHistory } from 'react-router-dom';
 
-const Login: React.FC = () => {
+const Registro: React.FC = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
-  const history = useHistory();
 
-  const handleLogin = async () => {
+  const handleRegister = async () => {
     const { email, password } = formData;
 
     if (!email || !password) {
@@ -19,15 +17,12 @@ const Login: React.FC = () => {
 
     try {
       setError('');
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      console.log('Usuario ingresó correctamente:', userCredential.user);
-      alert('Inicio de sesión exitoso');
-      history.push('/home');
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      console.log('Usuario registrado exitosamente:', userCredential.user);
+      alert('Registro exitoso');
     } catch (err: any) {
-      if (err.code === "auth/wrong-password") {
-        setError("La contraseña es incorrecta.");
-      } else if (err.code === "auth/user-not-found") {
-        setError("No se encontró una cuenta con este correo.");
+      if (err.code === "auth/email-already-in-use") {
+        setError("El correo electrónico ya está registrado. Intenta iniciar sesión.");
       } else {
         setError(`Firebase: ${err.message}`);
       }
@@ -38,13 +33,13 @@ const Login: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Login</IonTitle>
+          <IonTitle>Registro</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <IonImg src="public/BookiaLoginv1.png" alt="BookHo img login" />
+        <IonImg src="public/BookiaLoginv1.png" alt="BookHo img registro" />
         <br />
-        <center><p><b>¡Bienvenido!</b></p></center>
+        <center><p><b>¡Crea tu cuenta!</b></p></center>
 
         <IonGrid>
           <IonRow className="ion-justify-content-center">
@@ -78,12 +73,12 @@ const Login: React.FC = () => {
         <br />
         {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
         <center>
-          <IonButton onClick={handleLogin}>Ingresar</IonButton>
+          <IonButton onClick={handleRegister}>Registrarse</IonButton>
         </center>
-        <center><p><b>¿Olvidaste tu contraseña?</b></p></center>
+        <center><p><b>¿Ya tienes una cuenta? <a href="/login">Inicia sesión</a></b></p></center>
       </IonContent>
     </IonPage>
   );
 };
 
-export default Login;
+export default Registro;

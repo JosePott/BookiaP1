@@ -7,6 +7,7 @@ import Biblioteca from './pages/Biblioteca'; // Página "Añadir"
 import Favoritos from './pages/Favoritos'; // Página "Favoritos"
 import MiPerfil from './pages/MiPerfil'; // Página "Mi Perfil"
 import Login from './pages/Login'; // Página "Login"
+import Registro from './pages/Registro'; // Página "Registro"
 import { playCircle, radio, library, heart, logoApple } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
@@ -53,10 +54,13 @@ const App: React.FC = () => (
           <Route exact path="/mi-perfil">
             <MiPerfil />
           </Route>
-
-          {/* Ruta para la página de Login */}
           <Route exact path="/login">
             <Login />
+          </Route>
+
+          {/* Nueva ruta para la página de Registro */}
+          <Route exact path="/registro">
+            <Registro />
           </Route>
 
           {/* Redirección al Home si no se encuentra la ruta */}
