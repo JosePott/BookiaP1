@@ -13,7 +13,7 @@ const Favoritos: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen>
         <IonCard>
-          <img alt="Silhouette of mountains" src="public/libro1.jpeg" />
+          <img alt="Silhouette of mountains" src="src/assets/libro1.jpeg" />
           <IonCardHeader>
             <IonCardTitle>Romper el círculo <IonIcon icon={heart} /></IonCardTitle>
             <IonCardSubtitle>COOLLEN HOVER</IonCardSubtitle>
@@ -24,7 +24,7 @@ const Favoritos: React.FC = () => {
         </IonCard>
 
         <IonCard>
-          <img alt="Silhouette of mountains" src="public/libro2.jpg" />
+          <img alt="Silhouette of mountains" src="src/assets/libro2.jpg" />
           <IonCardHeader>
             <IonCardTitle>Harry Potter y la piedra filosofal <IonIcon icon={heart} /></IonCardTitle>
             <IonCardSubtitle>J.K ROWLING</IonCardSubtitle>
@@ -35,7 +35,7 @@ const Favoritos: React.FC = () => {
         </IonCard>
 
         <IonCard>
-          <img alt="Silhouette of mountains" src="public/libro3.jpeg" />
+          <img alt="Silhouette of mountains" src="src/assets/libro3.jpeg" />
           <IonCardHeader>
             <IonCardTitle>Divergente <IonIcon icon={heart} /></IonCardTitle>
             <IonCardSubtitle>VERONICA ROTH</IonCardSubtitle>

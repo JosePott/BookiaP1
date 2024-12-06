@@ -37,7 +37,7 @@ const Registro: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <IonImg src="public/BookiaLoginv1.png" alt="BookHo img registro" />
+        <IonImg src="src/assets/BookiaLoginv1.png" alt="BookHo img registro" />
         <br />
         <center><p><b>¡Crea tu cuenta!</b></p></center>
 

@@ -20,7 +20,7 @@ import {
               <IonList>
                 <IonItem>
                   <IonThumbnail slot="start">
-                    <img alt="Silhouette of mountains" src="public/libro1.jpeg" />
+                    <img alt="Silhouette of mountains" src="src/assets/libro1.jpeg" />
                   </IonThumbnail>
                   <IonLabel>Romper el círculo
                     <br />
@@ -30,7 +30,7 @@ import {
   
                 <IonItem>
                   <IonThumbnail slot="start">
-                    <img alt="Silhouette of mountains" src="public/libro2.jpg" />
+                    <img alt="Silhouette of mountains" src="src/assets/libro2.jpg" />
                   </IonThumbnail>
                   <IonLabel>Harry Potter y la piedra filosofal
                   <p><b>Leído esta semana: 12 páginas</b></p>
@@ -39,7 +39,7 @@ import {
   
                 <IonItem>
                   <IonThumbnail slot="start">
-                    <img alt="Silhouette of mountains" src="public/libro3.jpeg" />
+                    <img alt="Silhouette of mountains" src="src/assets/libro3.jpeg" />
                   </IonThumbnail>
                   <IonLabel>Divergente
                   <p><b>Leído esta semana: 32 páginas</b></p>
@@ -58,7 +58,7 @@ import {
           </IonCard>
   
           <IonImg
-            src="public/BookHov1.png"
+            src="src/assets/BookHov1.png"
             alt="The Wisconsin State Capitol building in Madison, WI at night"
           />
   

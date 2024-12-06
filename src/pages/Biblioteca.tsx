@@ -30,7 +30,7 @@ import {
             </IonItem>
 
             <IonImg
-                src="public/BookHov2.png"
+                src="src/assets/BookHov2.png"
                 alt="BookHo emocionado porque anadiste un nuevo libro"
             />
 

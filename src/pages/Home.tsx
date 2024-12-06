@@ -58,7 +58,7 @@ const Home: React.FC = () => {
 
         {/* Tarjetas con imágenes, títulos y reseñas */}
         <IonCard>
-          <img alt="Silhouette of mountains" src="public/libro1.jpeg" />
+        <img src="src/assets/libro1.jpeg" alt="Libro 1" />
           <IonCardHeader>
             <IonCardTitle>Romper el círculo</IonCardTitle>
             <IonCardSubtitle>COOLLEN HOVER</IonCardSubtitle>
@@ -69,7 +69,7 @@ const Home: React.FC = () => {
         </IonCard>
 
         <IonCard>
-          <img alt="Silhouette of mountains" src="public/libro2.jpg" />
+          <img alt="Silhouette of mountains" src="src/assets/libro2.jpg" />
           <IonCardHeader>
             <IonCardTitle>Harry Potter y la piedra filosofal</IonCardTitle>
             <IonCardSubtitle>J.K ROWLING</IonCardSubtitle>
@@ -80,7 +80,7 @@ const Home: React.FC = () => {
         </IonCard>
 
         <IonCard>
-          <img alt="Silhouette of mountains" src="public/libro3.jpeg" />
+          <img alt="Silhouette of mountains" src="src/assets/libro3.jpeg" />
           <IonCardHeader>
             <IonCardTitle>Divergente</IonCardTitle>
             <IonCardSubtitle>VERONICA ROTH</IonCardSubtitle>

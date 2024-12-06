@@ -42,7 +42,7 @@ const Login: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <IonImg src="public/BookiaLoginv1.png" alt="BookHo img login" />
+        <IonImg src="src/assets/BookiaLoginv1.png" alt="BookHo img login" />
         <br />
         <center><p><b>¡Bienvenido!</b></p></center>
 
